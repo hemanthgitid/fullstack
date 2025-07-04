@@ -6,13 +6,17 @@ const Course = require('./models/course.js');
 require('dotenv').config();
 
 // mongoose.connect(process.env.MONGO_URI)
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('✅ MongoDB connected'))
+.catch(err => console.error('❌ MongoDB connection error:', err.message));
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+console.log("Connecting to:", process.env.MONGO_URI);
 
 
 app.get('/courses', async (req, res) => {
