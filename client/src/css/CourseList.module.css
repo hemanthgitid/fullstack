@@ -1,0 +1,123 @@
+.courselistWrapper {
+  position: relative;
+}
+
+.courselist {
+  padding: 2rem;
+  max-width: 1200px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #ffffff, #f4f4f4);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.courselist h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.coursegrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.coursecard {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.coursecard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007acc;
+  margin: 0;
+}
+
+.cardTime {
+  font-size: 0.85rem;
+  color: #555;
+  background-color: #eef6fb;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.courseInfo p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.courseInfo strong {
+  color: #444;
+}
+
+.formOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 2000;
+}
+
+.formContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 95%;
+  z-index: 2001;
+}
+
+@media (max-width: 480px) {
+  .courselist {
+    padding: 1rem;
+  }
+
+  .courselist h2 {
+    font-size: 1.8rem;
+  }
+
+  .cardHeader h3 {
+    font-size: 1.3rem;
+  }
+
+  .cardTime {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .courseInfo p {
+    font-size: 0.95rem;
+  }
+}
