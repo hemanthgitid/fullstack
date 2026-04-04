@@ -4,6 +4,7 @@ import styles from '../css/CourseList.module.css';
 import axios from 'axios';
 import Navbar from './Navbar';
 import StudentForm from './StudentForm';
+import { FaAlignCenter } from 'react-icons/fa';
 
 const CourseList = () => {
   const [courses, setCourses] = useState([]);
@@ -85,10 +86,15 @@ const CourseList = () => {
               </div>
             ))
           ) : (
-            <p>No courses found.</p>
+            <p style={{textAlign:'center'}} >No courses found.</p>
           )}
         </div>
       </div>
+
+      <div className={styles.footer}>
+            <p>BucketStudy</p>
+            <p>All copy rights are claimed @2003</p>
+      </div>  
     </div>
   );
 };
